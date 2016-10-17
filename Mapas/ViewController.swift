@@ -27,6 +27,8 @@ class ViewController: UIViewController {
                     print(placemark)
                     let annotation = MKPointAnnotation()
                     annotation.title = self.lugar.nombre
+                    annotation.coordinate = placemark.location!.coordinate
+                    
                     
                     //mostrar en mapa
                     self.mapView.showAnnotations([annotation], animated: true)
